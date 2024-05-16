@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   post 'books' => 'books#create'
   get 'index' => 'books#index'
   get 'show' => 'books#show'
-  get 'edit' => 'books#edit'
+  get 'books' => 'books#edit'
   get 'update' => 'books#update'
   get 'destroy' => 'books#destro'
   get 'homes/top'
