@@ -2,10 +2,25 @@
 
 <% @books.each do |book| %>
 
-　<p>Title</p>
-　<span><%= book.title %></span>
+<table>
+    <thead>
+     <tr>
+        <th>Title</th>
+        <th>Body</th>
+     </tr>
+    </thead>
 
-　<p>Body</p>
-　<span><%= book.body %></span>
+    <tbody>
+     <% @books.each do |book| %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.body %></td>
+        <td><a href= "show">Show</a></td>
+        <td><a href= "edit">Edit</a></td>
+        <td><a href ="destroy">Destroy</a></td>
+      </tr>
+     <% end %>
+    </tbody>
+</table>
 
 <% end %>
