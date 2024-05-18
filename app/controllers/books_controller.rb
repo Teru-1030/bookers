@@ -9,7 +9,8 @@ class BooksController < ApplicationController
       flash[:notice] = "Book was successfully created"
       redirect_to book_path(@book.id)
     else
-      render :show
+      flash.now[:notice] = "An error prevented this book from being saved"
+      render :index
     end
   end
 
@@ -32,7 +33,7 @@ class BooksController < ApplicationController
       flash[:notice] = "Book was successfully updated."
       redirect_to book_path(book.id)
     else
-      render :show
+      render :index
     end
   end
 
